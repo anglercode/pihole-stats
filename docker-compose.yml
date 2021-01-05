@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+
+  pihole_stats:
+    restart: always
+    build: .
+    container_name: pihole_stats
+    hostname: pihole_stats
+    network_mode: "host"
+    env_file:
+      - '.env'
